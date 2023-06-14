@@ -9,3 +9,4 @@
 
 ## Run
 - python schedule.py
+- pyinstaller -F lunch.py
