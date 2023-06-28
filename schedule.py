@@ -13,9 +13,11 @@ def get_values():
         fir_count = 0
         sec_count = 0
         for row in rows:
+            print(row)
             if row[0].value == '週六' or row[0].value == '週日':
                 if row[1].value == '全':
                     dic.clear()
+                    
                     fir_count += 1
                 if row[2].value == '全':
                     dic.clear()
@@ -23,7 +25,7 @@ def get_values():
 
         dic[sheet.cell(row=3, column= 3).value]=fir_count
         dic[sheet.cell(row=3, column= 4).value]=sec_count
-        print(sheet, dic)
+        # print(sheet, dic)
         for key, val in dic.items():
             total.append([key, val])
     wb.save('專櫃值班表new-v2 - 複製.xlsx')
